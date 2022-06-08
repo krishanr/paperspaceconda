@@ -1,0 +1,19 @@
+#Create environment using:
+#$ conda env create --file=file-name.yml
+name: tf2
+channels:
+  - conda-forge
+  - defaults
+  - anaconda
+dependencies:
+- python=3.6
+- pip=21
+- jupyter==1.0.0
+- tensorflow-gpu=2.2
+- pip:
+  - mlflow==1.11.0
+  - python-dotenv==0.15.0
+  - matplotlib==3.1.2
+  - Pillow==8.0.1
+  - scikit-image==0.17.2
+  - ruamel_yaml==0.16.12
