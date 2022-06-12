@@ -8,7 +8,9 @@ channels:
 dependencies:
 - python=3.6
 - pip=21
-- jupyter==1.0.0
+- jupyterlab
+- jupyter_client=7.1.0
+- jupyter_server=1.13.1
 - tensorflow-gpu=2.2
 - pip:
   - mlflow==1.11.0

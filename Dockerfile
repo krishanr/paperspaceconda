@@ -21,9 +21,8 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 
 RUN pip install -U pip -qqq
 
-ADD environment-tf2-linux.yml $APP_HOME/environment-tf2-linux.yml
-RUN conda env create -f $APP_HOME/environment-tf2-linux.yml
+ADD environment.yml $APP_HOME/environment.yml
+RUN conda env create -f $APP_HOME/environment.yml
 
-RUN conda install -y -c conda-forge jupyterlab
-
+ENV PATH $CONDA_DIR/envs/tf2/bin:$PATH
 RUN echo "source activate tf2" > ~/.bashrc
