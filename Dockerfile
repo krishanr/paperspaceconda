@@ -19,6 +19,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 # Put conda in path so we can use conda activate
 ENV PATH=$CONDA_DIR/bin:$PATH
 
+# ------------- FROM HERE ON IS MY ANCONDA ENVIRONMENT SETUP -------------
 RUN pip install -U pip -qqq
 
 ADD environment.yml $APP_HOME/environment.yml
